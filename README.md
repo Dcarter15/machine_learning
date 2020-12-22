@@ -167,7 +167,7 @@ The last part of the model is getting the results and calculating the errors. Th
 
 Which resulted in these results:
 
-
+![alt text](https://github.com/Dcarter15/machine_learning/blob/main/model_results.png?raw=true)
  
 # Conclusion
 This was a very long and tedious project. The code shown throughout this project is from the final python file that was written for this model. Several attempts were made until the final product was created. The main issue that was found initially was that the data was overfitting to the training set causing the results to be misleading. A cross validation test was conducted as a first attempt to solve this issue. The final resolution was adding in the validation split to negate overfitting. This was not the case for every model as half of the models still overfit the data. This is significant improvement as all of the models were overfitting previously. From the results it is evident that the XGBRegressor model was the most accurate with a tested R^2 value at 0.96. This means that we can expect that roughly 96% of the predictions made from the model are being predicted correctly. 
