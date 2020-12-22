@@ -167,63 +167,10 @@ The last part of the model is getting the results and calculating the errors. Th
 
 Which resulted in these results:
 
+
  
 # Conclusion
 This was a very long and tedious project. The code shown throughout this project is from the final python file that was written for this model. Several attempts were made until the final product was created. The main issue that was found initially was that the data was overfitting to the training set causing the results to be misleading. A cross validation test was conducted as a first attempt to solve this issue. The final resolution was adding in the validation split to negate overfitting. This was not the case for every model as half of the models still overfit the data. This is significant improvement as all of the models were overfitting previously. From the results it is evident that the XGBRegressor model was the most accurate with a tested R^2 value at 0.96. This means that we can expect that roughly 96% of the predictions made from the model are being predicted correctly. 
-References
+
+# References
 https://machinelearningmastery.com/repeated-k-fold-cross-validation-with-python/
-
-
-
-Footnotes
-1Add footnotes, if any, on their own page following references. The body of a footnote, such as this example, uses the Normal text style. (Note: If you delete this sample footnote, don’t forget to delete its in-text reference as well. That’s at the end of the sample Heading 2 paragraph on the first page of body content in this template.)
-Tables
-Table 1
-Table Title
-Column Head
-Column Head
-Column Head
-Column Head
-Column Head
-
-Row Head
-123
-123
-123
-123
-
-Row Head
-456
-456
-456
-456
-
-Row Head
-789
-789
-789
-789
-
-Row Head
-123
-123
-123
-123
-
-Row Head
-456
-456
-456
-456
-
-Row Head
-789
-789
-789
-789
-
-Note: Place all tables for your paper in a tables section, following references (and, if applicable, footnotes). Start a new page for each table, include a table number and table title for each, as shown on this page. All explanatory text appears in a table note that follows the table, such as this one. Use the Table/Figure style, available on the Home tab, in the Styles gallery, to get the spacing between table and note. Tables in APA format can use single or 1.5-line spacing. Include a heading for every row and column, even if the content seems obvious. A table style has been setup for this template that fits APA guidelines. To insert a table, on the Insert tab, click Table.
-Figures
- 
-Figure 1. Include all figures in their own section, following references (and footnotes and tables, if applicable). Include a numbered caption for each figure. Use the Table/Figure style for easy spacing between figure and caption.
-For more information about all elements of APA formatting, please consult the APA Style Manual, 6th Edition.
