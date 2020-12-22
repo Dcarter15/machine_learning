@@ -1,15 +1,19 @@
 # machine_learning
 
-Predicting Business Major’s G.P.A. with Machine Learning
+# Predicting Business Major’s G.P.A. with Machine Learning
 Daniel Z. Carter
 Bushnell University 
-Author Note
+
+# Author Note
 This is my senior capstone project. My faculty mentor was Ernest Bonat, Ph.D. Computer Engineering Faculty. 
-Abstract
+
+# Abstract
 This is a write up detailing the process in which a machine learning model was used on data from Bushnell University to predict G.P.A. of Business Majors based on select features.
-Predicting Business Major’s G.P.A. with Machine Learning
+
+# Predicting Business Major’s G.P.A. with Machine Learning
  Research Question: Can a machine learning linear regression model successfully predict a Business Major’s G.P.A. based on credits attempted and credits earned, classes, gender, whether the student is an athlete, style of class (online or in-person), and the grade received for each class?
-Preprocessing
+ 
+# Preprocessing
 The first step was to gather and clean the data. The data that was used for this project was gathered from Bushnell University. The data consists of student data dating back to the 90’s and came in the form of two separate CSV files. In order to begin creating the model the data needed to be cleaned so it can be plugged into the model and not cause an error. The very first step is to import the initial libraries that will be used for the cleanup process.
 import sklearn
 import pandas as pd
@@ -39,7 +43,7 @@ Another feature was created by dividing the total credits column by 4 to take an
 	The next step in the preprocessing process was to encode the data for the model. This was done using Label Encoder:
 from sklearn import preprocessing
 from sklearn.preprocessing import LabelEncoder
-# label encoder categorical columns: four, five, eight
+label encoder categorical columns: four, five, eight
 label_encoder_four = LabelEncoder()  
 final_df['GENDER'] = label_encoder_four.fit_transform(final_df['GENDER'])
 label_encoder_five = LabelEncoder()        
@@ -65,7 +69,7 @@ The preprocessing phase is almost complete. The last thing that was done was con
 outlier["HRS_ATTEMPTED"]=pd.to_numeric(outlier["HRS_ATTEMPTED"],errors='coerce')
 outlier = outlier.astype("float64")
 
-The Model
+# The Model
 The first step in creating the model was to call in all of the appropriate libraries and packages in order to create the model:
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -164,7 +168,7 @@ The last part of the model is getting the results and calculating the errors. Th
 Which resulted in these results:
 
  
-Conclusion
+# Conclusion
 This was a very long and tedious project. The code shown throughout this project is from the final python file that was written for this model. Several attempts were made until the final product was created. The main issue that was found initially was that the data was overfitting to the training set causing the results to be misleading. A cross validation test was conducted as a first attempt to solve this issue. The final resolution was adding in the validation split to negate overfitting. This was not the case for every model as half of the models still overfit the data. This is significant improvement as all of the models were overfitting previously. From the results it is evident that the XGBRegressor model was the most accurate with a tested R^2 value at 0.96. This means that we can expect that roughly 96% of the predictions made from the model are being predicted correctly. 
 References
 https://machinelearningmastery.com/repeated-k-fold-cross-validation-with-python/
